@@ -9,7 +9,7 @@ php artisan key:generate
 echo "Starting install eslint"
 npm --version
 npm install
-#npm install eslint --save-dev
+
 
 # Install code php_codesniffer
 composer global require "squizlabs/php_codesniffer=*"

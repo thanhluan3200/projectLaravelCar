@@ -1,0 +1,154 @@
+version: 2
+jobs:
+  format_code:
+    machine:
+      image: ubuntu-2004:current
+    resource_class: large
+    docker_layer_caching: true
+    steps:
+      - checkout
+      - run: echo "Start format code"
+      - run: 
+          name: "Start services ..."
+          command: docker-compose -f docker-compose.yml up -d
+      - run:
+          name: "Install composer ..."
+          command: docker-compose -f docker-compose.yml exec app composer install
+      - run:
+          name: "Test database connection ..."
+          command: docker-compose -f docker-compose.yml down
+
+
+  build:
+    machine: 
+      image: ubuntu-2004:current
+    resource_class: large
+    docker_layer_caching: true
+    steps:
+      - checkout
+      - run: echo "Start build"
+      - run: docker-compose -f docker-compose.yml up -d
+      - run: docker-compose -f docker-compose.yml exec app composer install
+      - run: docker-compose -f docker-compose.yml down
+
+
+  test_database:
+    machine: 
+      image: ubuntu-2004:current
+    resource_class: large
+    docker_layer_caching: true
+    steps:
+      - checkout
+      - run: echo "Start test databases"
+      - run: docker-compose -f docker-compose.yml up -d
+      - run: docker-compose -f docker-compose.yml exec app composer install
+      - run: docker-compose -f docker-compose.yml exec app php artisan make:test UserTest --unit
+          
+  
+  test_unit:
+    machine: 
+      image: ubuntu-2004:current
+    resource_class: large
+    docker_layer_caching: true
+    requires:
+      - build
+    steps:  
+      - checkout
+      - run: echo "Start test_unit"
+      - run: docker-compose -f docker-compose.yml up -d
+      - run: docker-compose -f docker-compose.yml exec app composer install
+      - run: docker-compose -f docker-compose.yml exec app php artisan make:test UserTest --unit
+      - run: docker-compose -f docker-compose.yml down
+  
+  test_coverage:
+    machine: 
+      image: ubuntu-2004:current
+    resource_class: large
+    docker_layer_caching: true
+    requires:
+      - build
+    # parallelism: 3
+    steps:  
+      - checkout
+      - run: echo "Start tets coverage"
+      - run: 
+          name: "Start services ..."
+          command: docker-compose -f docker-compose.yml up -d
+    
+      - run: 
+          name: "Install composer ..."
+          command: docker-compose -f docker-compose.yml exec app composer install
+
+      - run: 
+          name: "Running test coverage ..."
+          command: docker-compose -f docker-compose.yml exec app php artisan make:test UserTest --unit
+    
+  test_php:
+    machine: 
+      image: ubuntu-2004:current
+    resource_class: large
+    docker_layer_caching: true
+    requires:
+      - build
+    steps:  
+      - checkout
+      - run: echo "Start test php"
+      - run: docker-compose -f docker-compose.yml up -d
+      - run: docker-compose -f docker-compose.yml exec app composer install
+      - run: docker-compose -f docker-compose.yml exec app php artisan make:test UserTest --unit
+  
+  production:
+    machine: 
+      image: ubuntu-2004:current
+    resource_class: large
+    docker_layer_caching: true
+    requires:
+      - build
+    steps:  
+      - checkout
+      - run: echo "Production"
+      - run: docker-compose -f docker-compose.yml up -d
+      - run: docker-compose -f docker-compose.yml down
+
+workflows:
+  version: 2
+  linting:
+    jobs:
+      - format_code
+
+  build_and_test:
+    jobs:
+      - build
+      - test_php:
+          requires:
+            - build
+
+      - test_unit:
+          requires:
+            - build
+
+      - test_coverage:
+          requires:
+            - build
+
+      - test_database:
+          requires:
+            - build
+          
+  production:
+    jobs:
+      - test_php
+      - test_unit
+      - test_coverage
+      - test_database
+      - production:
+          requires:
+            - test_php
+            - test_unit
+            - test_coverage
+            - test_database
+          filters:
+            branches:
+              only: 
+               - master
+

@@ -1,0 +1,90 @@
+version: '3.8'
+services:
+  # PHP Services
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    container_name: app
+    tty: true
+    working_dir: /var/www/html
+    volumes: 
+      - ./src/:/var/www/html
+    entrypoint: ./.docker/script/appStart.sh
+    healthcheck:
+      test: wget --quiet --tries=1 --spider http://localhost:8000 || exit 1z
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    depends_on:
+      - mariadb
+    networks:
+      - app-network
+  
+  # Nginx Services
+  webserver:
+    image: nginx:1.17-alpine
+    container_name: webserver
+    tty: true
+    restart: unless-stopped
+    env_file:
+      - ./env/.nginx.env
+    volumes:
+      - ./src/:/var/www/html
+      - ./src/.docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "${PUBLIC_PORT}:${PORT}"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://nginx.host.com"]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    networks:
+      - app-network
+  
+  # MariaDB Services
+  mariadb:
+    image: mariadb:10.4.24
+    container_name: maria_database
+    tty: true
+    restart: unless-stopped
+    env_file:
+      - ./env/.mariadb.env
+    volumes:
+      - ./src/.docker/db:/var/lib/mysql
+    ports:
+      - "${DB_PUBLIC_PORT}:${DB_PORT}"
+    healthcheck:
+      test: ["executable", "arg"]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    networks:
+      - app-network
+
+  # PhpMyAdmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    tty: true
+    env_file:
+      - ./env/.phpmyadmin.env
+    volumes:
+      - ./src/.docker/phpmyadmin:/etc/phpmyadmin/config.user.inc.php
+    ports:
+      - "${PMAS_PUBLIC_PORT}:${PMAS_PORT}"
+    restart: unless-stopped
+    networks:
+      - app-network
+    depends_on:
+      - mariadb
+        
+# NETWORK
+networks:
+  app-network:
+    name: app-network
+    driver: bridge

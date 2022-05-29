@@ -193,42 +193,42 @@ Route::prefix('admin')->group(function () {
     });
 //
 //    //Sliders
-//    Route::prefix('sliders')->group(function () {
-//        Route::get('/', [
-//            'as' => 'slider.index',
-//            'uses' => 'AdminSliderController@index',
-////            'middleware' => 'can:slider-list'
-//        ]);
-//
-//        Route::get('/create', [
-//            'as' => 'slider.create',
-//            'uses' => 'AdminSliderController@create',
-////            'middleware' => 'can:slider-add'
-//        ]);
-//
-//        Route::post('/store', [
-//            'as' => 'slider.store',
-//            'uses' => 'AdminSliderController@store'
-//        ]);
-//
-//        Route::get('/edit/{id}', [
-//            'as' => 'slider.edit',
-//            'uses' => 'AdminSliderController@edit',
-////            'middleware' => 'can:slider-edit'
-//        ]);
-//
-//        Route::post('/update/{id}', [
-//            'as' => 'slider.update',
-//            'uses' => 'AdminSliderController@update'
-//        ]);
-//
-//        Route::get('/delete/{id}', [
-//            'as' => 'slider.delete',
-//            'uses' => 'AdminSliderController@delete',
-////            'middleware' => 'can:slider-delete'
-//        ]);
-//
-//    });
+    Route::prefix('sliders')->group(function () {
+        Route::get('/', [
+            'as' => 'slider.index',
+            'uses' => 'AdminSliderController@index',
+//            'middleware' => 'can:slider-list'
+        ]);
+
+        Route::get('/create', [
+            'as' => 'slider.create',
+            'uses' => 'AdminSliderController@create',
+//            'middleware' => 'can:slider-add'
+        ]);
+
+        Route::post('/store', [
+            'as' => 'slider.store',
+            'uses' => 'AdminSliderController@store'
+        ]);
+
+        Route::get('/edit/{id}', [
+            'as' => 'slider.edit',
+            'uses' => 'AdminSliderController@edit',
+//            'middleware' => 'can:slider-edit'
+        ]);
+
+        Route::post('/update/{id}', [
+            'as' => 'slider.update',
+            'uses' => 'AdminSliderController@update'
+        ]);
+
+        Route::get('/delete/{id}', [
+            'as' => 'slider.delete',
+            'uses' => 'AdminSliderController@delete',
+//            'middleware' => 'can:slider-delete'
+        ]);
+
+    });
 //
 //    //Settings
 //    Route::prefix('settings')->group(function () {
@@ -267,113 +267,113 @@ Route::prefix('admin')->group(function () {
 //    });
 //
 //    //Users
-//    Route::prefix('users')->group(function () {
-//        Route::get('/', [
-//            'as' => 'users.index',
-//            'uses' => 'AdminUserController@index',
-////            'middleware' => 'can:user-list'
-//        ]);
-//
-//        Route::get('/create', [
-//            'as' => 'users.create',
-//            'uses' => 'AdminUserController@create',
-////            'middleware' => 'can:user-add'
-//        ]);
-//
-//        Route::post('/store', [
-//            'as' => 'users.store',
-//            'uses' => 'AdminUserController@store'
-//        ]);
-//
-//        Route::get('/edit/{id}', [
-//            'as' => 'users.edit',
-//            'uses' => 'AdminUserController@edit',
-////            'middleware' => 'can:user-edit'
-//        ]);
-//
-//        Route::post('/update/{id}', [
-//            'as' => 'users.update',
-//            'uses' => 'AdminUserController@update'
-//        ]);
-//
-//        Route::get('/delete/{id}', [
-//            'as' => 'users.delete',
-//            'uses' => 'AdminUserController@delete',
-////            'middleware' => 'can:user-delete'
-//        ]);
-//
-//    });
+    Route::prefix('users')->group(function () {
+        Route::get('/', [
+            'as' => 'users.index',
+            'uses' => 'AdminUserController@index',
+//            'middleware' => 'can:user-list'
+        ]);
+
+        Route::get('/create', [
+            'as' => 'users.create',
+            'uses' => 'AdminUserController@create',
+//            'middleware' => 'can:user-add'
+        ]);
+
+        Route::post('/store', [
+            'as' => 'users.store',
+            'uses' => 'AdminUserController@store'
+        ]);
+
+        Route::get('/edit/{id}', [
+            'as' => 'users.edit',
+            'uses' => 'AdminUserController@edit',
+//            'middleware' => 'can:user-edit'
+        ]);
+
+        Route::post('/update/{id}', [
+            'as' => 'users.update',
+            'uses' => 'AdminUserController@update'
+        ]);
+
+        Route::get('/delete/{id}', [
+            'as' => 'users.delete',
+            'uses' => 'AdminUserController@delete',
+//            'middleware' => 'can:user-delete'
+        ]);
+
+    });
 //
 //    //Roles
-//    Route::prefix('roles')->group(function () {
-//        Route::get('/', [
-//            'as' => 'roles.index',
-//            'uses' => 'AdminRoleController@index',
-////            'middleware' => 'can:role-list'
-//        ]);
-//
-//        Route::get('/create', [
-//            'as' => 'roles.create',
-//            'uses' => 'AdminRoleController@create',
-////            'middleware' => 'can:role-add'
-//        ]);
-//
-//        Route::post('/store', [
-//            'as' => 'roles.store',
-//            'uses' => 'AdminRoleController@store'
-//        ]);
-//
-//        Route::get('/edit/{id}', [
-//            'as' => 'roles.edit',
-//            'uses' => 'AdminRoleController@edit',
-////            'middleware' => 'can:role-edit'
-//        ]);
-//
-//        Route::post('/update/{id}', [
-//            'as' => 'roles.update',
-//            'uses' => 'AdminRoleController@update'
-//        ]);
-//
-////        Route::get('/delete/{id}', [
-////            'as' => 'roles.delete',
-////            'uses' => 'AdminRoleController@delete'
-////        ]);
-//
-//    });
-//
+    Route::prefix('roles')->group(function () {
+        Route::get('/', [
+            'as' => 'roles.index',
+            'uses' => 'AdminRoleController@index',
+//            'middleware' => 'can:role-list'
+        ]);
+
+        Route::get('/create', [
+            'as' => 'roles.create',
+            'uses' => 'AdminRoleController@create',
+//            'middleware' => 'can:role-add'
+        ]);
+
+        Route::post('/store', [
+            'as' => 'roles.store',
+            'uses' => 'AdminRoleController@store'
+        ]);
+
+        Route::get('/edit/{id}', [
+            'as' => 'roles.edit',
+            'uses' => 'AdminRoleController@edit',
+//            'middleware' => 'can:role-edit'
+        ]);
+
+        Route::post('/update/{id}', [
+            'as' => 'roles.update',
+            'uses' => 'AdminRoleController@update'
+        ]);
+
+        Route::get('/delete/{id}', [
+            'as' => 'roles.delete',
+            'uses' => 'AdminRoleController@delete'
+        ]);
+
+    });
+
 //    //Permission
-//    Route::prefix('permissions')->group(function () {
-//        Route::get('/create', [
-//            'as' => 'permissions.create',
-//            'uses' => 'AdminPermissionController@createPermissions',
-////            'middleware' => 'can:permission-list'
-//        ]);
-//
-//        Route::post('/store', [
-//            'as' => 'permissions.store',
-//            'uses' => 'AdminPermissionController@store'
-//        ]);
-//    });
+    Route::prefix('permissions')->group(function () {
+        Route::get('/create', [
+            'as' => 'permissions.create',
+            'uses' => 'AdminPermissionController@createPermissions',
+//            'middleware' => 'can:permission-list'
+        ]);
+
+        Route::post('/store', [
+            'as' => 'permissions.store',
+            'uses' => 'AdminPermissionController@store'
+        ]);
+    });
 //
 //    //Order
-//    Route::prefix('order')->group(function () {
-//        Route::get('/', [
-//            'as' => 'order.index',
-//            'uses' => 'AdminOrderController@index',
-////            'middleware' => 'can:order-list'
-//        ]);
-//
-//        Route::get('/view/{id}', [
-//            'as' => 'order.view',
-//            'uses' => 'AdminOrderController@view',
-////            'middleware' => 'can:order-view'
-//        ]);
-//        Route::get('/checked_status/{id}', [
-//            'as' => 'order.checked_status',
-//            'uses' => 'AdminOrderController@checked_status'
-//        ]);
-//
-//    });
+    Route::prefix('order')->group(function () {
+        Route::get('/', [
+            'as' => 'order.index',
+            'uses' => 'AdminOrderController@index',
+//            'middleware' => 'can:order-list'
+        ]);
+
+        Route::get('/view/{id}', [
+            'as' => 'order.view',
+            'uses' => 'AdminOrderController@view',
+//            'middleware' => 'can:order-view'
+        ]);
+        Route::get('/checked_status/{id}', [
+            'as' => 'order.checked_status',
+            'uses' => 'AdminOrderController@checked_status'
+        ]);
+
+    });
 
 
 });

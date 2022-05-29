@@ -50,25 +50,25 @@
                     </li>
 {{--                @endcan--}}
 {{--                @can('order-list')--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="{{route('order.index')}}" class="nav-link">--}}
-{{--                            <i class="fa fa-credit-card" aria-hidden="true"></i>--}}
-{{--                            <p>--}}
-{{--                                Đơn hàng--}}
-{{--                            </p>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
+                    <li class="nav-item">
+                        <a href="{{route('order.index')}}" class="nav-link">
+                            <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            <p>
+                                Đơn hàng
+                            </p>
+                        </a>
+                    </li>
 {{--                @endcan--}}
 {{--                @can('slider-list')--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="{{route('slider.index')}}" class="nav-link">--}}
-{{--                            <i class="fas fa-sliders-h"></i>--}}
-{{--                            <p>--}}
-{{--                                Slider--}}
+                    <li class="nav-item">
+                        <a href="{{route('slider.index')}}" class="nav-link">
+                            <i class="fas fa-sliders-h"></i>
+                            <p>
+                                Slider
 
-{{--                            </p>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
+                            </p>
+                        </a>
+                    </li>
 {{--                @endcan--}}
 {{--                @can('setting-list')--}}
 {{--                    <li class="nav-item">--}}
@@ -82,36 +82,36 @@
 {{--                    </li>--}}
 {{--                @endcan--}}
 {{--                @can('user-list')--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="{{route('users.index')}}" class="nav-link">--}}
-{{--                            <i class="fa fa-users" aria-hidden="true"></i>--}}
-{{--                            <p>--}}
-{{--                                Người dùng--}}
-{{--                            </p>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
+                    <li class="nav-item">
+                        <a href="{{route('users.index')}}" class="nav-link">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            <p>
+                                Người dùng
+                            </p>
+                        </a>
+                    </li>
 {{--                @endcan--}}
 {{--                @can('role-list')--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="{{route('roles.index')}}" class="nav-link">--}}
-{{--                            <i class='fab fa-critical-role'></i>--}}
-{{--                            <p>--}}
-{{--                                Vai trò--}}
+                    <li class="nav-item">
+                        <a href="{{route('roles.index')}}" class="nav-link">
+                            <i class='fab fa-critical-role'></i>
+                            <p>
+                                Vai trò
 
-{{--                            </p>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
+                            </p>
+                        </a>
+                    </li>
 {{--                @endcan--}}
 {{--                @can('permission-list')--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="{{route('permissions.create')}}" class="nav-link">--}}
-{{--                            <i class="fa fa-plane" aria-hidden="true"></i>--}}
-{{--                            <p>--}}
-{{--                                Tạo dữ liệu permissions--}}
+                    <li class="nav-item">
+                        <a href="{{route('permissions.create')}}" class="nav-link">
+                            <i class="fa fa-plane" aria-hidden="true"></i>
+                            <p>
+                                Tạo dữ liệu permissions
 
-{{--                            </p>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
+                            </p>
+                        </a>
+                    </li>
 {{--                @endcan--}}
             </ul>
         </nav>

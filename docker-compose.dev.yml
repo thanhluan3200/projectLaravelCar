@@ -11,7 +11,7 @@ services:
     working_dir: /var/www/html
     volumes: 
       - ./src/:/var/www/html
-    entrypoint: ./.docker/script/appStart.sh
+    # entrypoint: ./.docker/script/appStart.sh
     healthcheck:
       test: wget --quiet --tries=1 --spider http://localhost:8000 || exit 1z
       interval: 1m30s
@@ -57,12 +57,12 @@ services:
       - ./src/.docker/db:/var/lib/mysql
     ports:
       - "${DB_PUBLIC_PORT}:${DB_PORT}"
-    healthcheck:
-      test: ["executable", "arg"]
-      interval: 1m30s
-      timeout: 30s
-      retries: 5
-      start_period: 30s
+    # healthcheck:
+    #   test: ["executable", "arg"]
+    #   interval: 1m30s
+    #   timeout: 30s
+    #   retries: 5
+    #   start_period: 30s
     networks:
       - app-network
 

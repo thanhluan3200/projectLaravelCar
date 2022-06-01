@@ -7,6 +7,7 @@ jobs:
     docker_layer_caching: true
     steps:
       - checkout
+      - run: chmod +x ./src/docker/script/appStart.sh
       - run: echo "Start format code"
       - run: 
           name: "Start services ..."
@@ -116,39 +117,39 @@ workflows:
     jobs:
       - format_code
 
-  build_and_test:
-    jobs:
-      - build
-      - test_php:
-          requires:
-            - build
+  # build_and_test:
+  #   jobs:
+  #     - build
+  #     - test_php:
+  #         requires:
+  #           - build
 
-      - test_unit:
-          requires:
-            - build
+  #     - test_unit:
+  #         requires:
+  #           - build
 
-      - test_coverage:
-          requires:
-            - build
+  #     - test_coverage:
+  #         requires:
+  #           - build
 
-      - test_database:
-          requires:
-            - build
+  #     - test_database:
+  #         requires:
+  #           - build
           
-  production:
-    jobs:
-      - test_php
-      - test_unit
-      - test_coverage
-      - test_database
-      - production:
-          requires:
-            - test_php
-            - test_unit
-            - test_coverage
-            - test_database
-          filters:
-            branches:
-              only: 
-               - master
+  # production:
+  #   jobs:
+  #     - test_php
+  #     - test_unit
+  #     - test_coverage
+  #     - test_database
+  #     - production:
+  #         requires:
+  #           - test_php
+  #           - test_unit
+  #           - test_coverage
+  #           - test_database
+  #         filters:
+  #           branches:
+  #             only: 
+  #              - master
 

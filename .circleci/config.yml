@@ -7,7 +7,7 @@ jobs:
     docker_layer_caching: true
     steps:
       - checkout
-      - run: chmod +x ./src/docker/script/appStart.sh
+      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: echo "Start format code"
       - run: 
           name: "Start services ..."

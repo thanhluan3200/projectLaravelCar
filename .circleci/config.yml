@@ -7,7 +7,6 @@ jobs:
     docker_layer_caching: true
     steps:
       - checkout
-      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: echo "Start format code"
       - run: 
           name: "Start services ..."
@@ -27,7 +26,6 @@ jobs:
     docker_layer_caching: true
     steps:
       - checkout
-      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: echo "Start build"
       - run: docker-compose -f docker-compose.yml up -d
       - run: docker-compose -f docker-compose.yml exec app composer install
@@ -41,11 +39,12 @@ jobs:
     docker_layer_caching: true
     steps:
       - checkout
-      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: echo "Start test databases"
       - run: docker-compose -f docker-compose.yml up -d
       - run: docker-compose -f docker-compose.yml exec app composer install
       - run: docker-compose -f docker-compose.yml exec app php artisan make:test UserTest --unit
+      - run: docker-compose -f docker-compose.yml down
+
           
   
   test_unit:
@@ -57,7 +56,6 @@ jobs:
       - build
     steps:  
       - checkout
-      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: echo "Start test_unit"
       - run: docker-compose -f docker-compose.yml up -d
       - run: docker-compose -f docker-compose.yml exec app composer install
@@ -74,7 +72,6 @@ jobs:
     # parallelism: 3
     steps:  
       - checkout
-      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: echo "Start tets coverage"
       - run: 
           name: "Start services ..."
@@ -97,7 +94,6 @@ jobs:
       - build
     steps:  
       - checkout
-      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: echo "Start test php"
       - run: docker-compose -f docker-compose.yml up -d
       - run: docker-compose -f docker-compose.yml exec app composer install
@@ -112,7 +108,6 @@ jobs:
       - build
     steps:  
       - checkout
-      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: echo "Production"
       - run: docker-compose -f docker-compose.yml up -d
       - run: docker-compose -f docker-compose.yml down

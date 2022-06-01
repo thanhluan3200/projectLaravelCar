@@ -27,6 +27,7 @@ jobs:
     docker_layer_caching: true
     steps:
       - checkout
+      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: echo "Start build"
       - run: docker-compose -f docker-compose.yml up -d
       - run: docker-compose -f docker-compose.yml exec app composer install
@@ -40,6 +41,7 @@ jobs:
     docker_layer_caching: true
     steps:
       - checkout
+      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: echo "Start test databases"
       - run: docker-compose -f docker-compose.yml up -d
       - run: docker-compose -f docker-compose.yml exec app composer install
@@ -55,6 +57,7 @@ jobs:
       - build
     steps:  
       - checkout
+      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: echo "Start test_unit"
       - run: docker-compose -f docker-compose.yml up -d
       - run: docker-compose -f docker-compose.yml exec app composer install
@@ -71,6 +74,7 @@ jobs:
     # parallelism: 3
     steps:  
       - checkout
+      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: echo "Start tets coverage"
       - run: 
           name: "Start services ..."
@@ -93,6 +97,7 @@ jobs:
       - build
     steps:  
       - checkout
+      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: echo "Start test php"
       - run: docker-compose -f docker-compose.yml up -d
       - run: docker-compose -f docker-compose.yml exec app composer install
@@ -107,6 +112,7 @@ jobs:
       - build
     steps:  
       - checkout
+      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: echo "Production"
       - run: docker-compose -f docker-compose.yml up -d
       - run: docker-compose -f docker-compose.yml down
@@ -117,39 +123,39 @@ workflows:
     jobs:
       - format_code
 
-  # build_and_test:
-  #   jobs:
-  #     - build
-  #     - test_php:
-  #         requires:
-  #           - build
+  build_and_test:
+    jobs:
+      - build
+      - test_php:
+          requires:
+            - build
 
-  #     - test_unit:
-  #         requires:
-  #           - build
+      - test_unit:
+          requires:
+            - build
 
-  #     - test_coverage:
-  #         requires:
-  #           - build
+      - test_coverage:
+          requires:
+            - build
 
-  #     - test_database:
-  #         requires:
-  #           - build
+      - test_database:
+          requires:
+            - build
           
-  # production:
-  #   jobs:
-  #     - test_php
-  #     - test_unit
-  #     - test_coverage
-  #     - test_database
-  #     - production:
-  #         requires:
-  #           - test_php
-  #           - test_unit
-  #           - test_coverage
-  #           - test_database
-  #         filters:
-  #           branches:
-  #             only: 
-  #              - master
+  production:
+    jobs:
+      - test_php
+      - test_unit
+      - test_coverage
+      - test_database
+      - production:
+          requires:
+            - test_php
+            - test_unit
+            - test_coverage
+            - test_database
+          filters:
+            branches:
+              only: 
+               - master
 

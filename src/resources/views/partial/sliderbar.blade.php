@@ -28,15 +28,15 @@
                     </li>
 {{--                @endcan--}}
 {{--                @can('menu-list')--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="{{route('menus.index')}}" class="nav-link">--}}
-{{--                            <i class="fas fa-bars"></i>--}}
-{{--                            <p>--}}
-{{--                                Menu--}}
+                    <li class="nav-item">
+                        <a href="{{route('menus.index')}}" class="nav-link">
+                            <i class="fas fa-bars"></i>
+                            <p>
+                                Menu
 
-{{--                            </p>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
+                            </p>
+                        </a>
+                    </li>
 {{--                @endcan--}}
 {{--                @can('product-list')--}}
                     <li class="nav-item">
@@ -71,15 +71,15 @@
                     </li>
 {{--                @endcan--}}
 {{--                @can('setting-list')--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="{{route('setting.index')}}" class="nav-link">--}}
-{{--                            <i class="fa fa-cog" aria-hidden="true"></i>--}}
-{{--                            <p>--}}
-{{--                                Setting--}}
+                    <li class="nav-item">
+                        <a href="{{route('setting.index')}}" class="nav-link">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <p>
+                                Setting
 
-{{--                            </p>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
+                            </p>
+                        </a>
+                    </li>
 {{--                @endcan--}}
 {{--                @can('user-list')--}}
                     <li class="nav-item">

@@ -114,44 +114,44 @@ Route::prefix('admin')->group(function () {
         ]);
     });
 
-//    //Menus
-//    Route::prefix('menus')->group(function () {
-//        Route::get('/', [
-//            'as' => 'menus.index',
-//            'uses' => 'MenuController@index',
-////            'middleware' => 'can:menu-list'
-//        ]);
-//
-//        Route::get('/create', [
-//            'as' => 'menus.create',
-//            'uses' => 'MenuController@create',
-////            'middleware' => 'can:menu-add'
-//        ]);
-//        Route::post('/store', [
-//            'as' => 'menus.store',
-//            'uses' => 'MenuController@store'
-//        ]);
-//
-//        Route::get('/edit/{id}', [
-//            'as' => 'menus.edit',
-//            'uses' => 'MenuController@edit',
-////            'middleware' => 'can:menu-edit'
-//        ]);
-//
-//        Route::post('/update/{id}', [
-//            'as' => 'menus.update',
-//            'uses' => 'MenuController@update'
-//        ]);
-//
-//        Route::get('/delete/{id}', [
-//            'as' => 'menus.delete',
-//            'uses' => 'MenuController@delete',
-////            'middleware' => 'can:menu-delete'
-//        ]);
-//
-//    });
-//
-//    //Products
+    //Menus
+    Route::prefix('menus')->group(function () {
+        Route::get('/', [
+            'as' => 'menus.index',
+            'uses' => 'MenuController@index',
+//            'middleware' => 'can:menu-list'
+        ]);
+
+        Route::get('/create', [
+            'as' => 'menus.create',
+            'uses' => 'MenuController@create',
+//            'middleware' => 'can:menu-add'
+        ]);
+        Route::post('/store', [
+            'as' => 'menus.store',
+            'uses' => 'MenuController@store'
+        ]);
+
+        Route::get('/edit/{id}', [
+            'as' => 'menus.edit',
+            'uses' => 'MenuController@edit',
+//            'middleware' => 'can:menu-edit'
+        ]);
+
+        Route::post('/update/{id}', [
+            'as' => 'menus.update',
+            'uses' => 'MenuController@update'
+        ]);
+
+        Route::get('/delete/{id}', [
+            'as' => 'menus.delete',
+            'uses' => 'MenuController@delete',
+//            'middleware' => 'can:menu-delete'
+        ]);
+
+    });
+
+    //Products
     Route::prefix('products')->group(function () {
         Route::get('/search', [
             'as' => 'product.searchbar',
@@ -191,8 +191,8 @@ Route::prefix('admin')->group(function () {
 //            'middleware' => 'can:product-delete'
         ]);
     });
-//
-//    //Sliders
+
+    //Sliders
     Route::prefix('sliders')->group(function () {
         Route::get('/', [
             'as' => 'slider.index',
@@ -229,44 +229,44 @@ Route::prefix('admin')->group(function () {
         ]);
 
     });
-//
-//    //Settings
-//    Route::prefix('settings')->group(function () {
-//        Route::get('/', [
-//            'as' => 'setting.index',
-//            'uses' => 'AdminSettingController@index',
-////            'middleware' => 'can:setting-list'
-//        ]);
-//        Route::get('/create', [
-//            'as' => 'setting.create',
-//            'uses' => 'AdminSettingController@create',
-////            'middleware' => 'can:setting-add'
-//        ]);
-//
-//        Route::post('/store', [
-//            'as' => 'setting.store',
-//            'uses' => 'AdminSettingController@store'
-//        ]);
-//        Route::get('/edit/{id}', [
-//            'as' => 'setting.edit',
-//            'uses' => 'AdminSettingController@edit',
-////            'middleware' => 'can:setting-edit'
-//        ]);
-//
-//        Route::post('/update/{id}', [
-//            'as' => 'setting.update',
-//            'uses' => 'AdminSettingController@update'
-//        ]);
-//
-//        Route::get('/delete/{id}', [
-//            'as' => 'setting.delete',
-//            'uses' => 'AdminSettingController@delete',
-////            'middleware' => 'can:setting-delete'
-//        ]);
-//
-//    });
-//
-//    //Users
+
+    //Settings
+    Route::prefix('settings')->group(function () {
+        Route::get('/', [
+            'as' => 'setting.index',
+            'uses' => 'AdminSettingController@index',
+//            'middleware' => 'can:setting-list'
+        ]);
+        Route::get('/create', [
+            'as' => 'setting.create',
+            'uses' => 'AdminSettingController@create',
+//            'middleware' => 'can:setting-add'
+        ]);
+
+        Route::post('/store', [
+            'as' => 'setting.store',
+            'uses' => 'AdminSettingController@store'
+        ]);
+        Route::get('/edit/{id}', [
+            'as' => 'setting.edit',
+            'uses' => 'AdminSettingController@edit',
+//            'middleware' => 'can:setting-edit'
+        ]);
+
+        Route::post('/update/{id}', [
+            'as' => 'setting.update',
+            'uses' => 'AdminSettingController@update'
+        ]);
+
+        Route::get('/delete/{id}', [
+            'as' => 'setting.delete',
+            'uses' => 'AdminSettingController@delete',
+//            'middleware' => 'can:setting-delete'
+        ]);
+
+    });
+
+    //Users
     Route::prefix('users')->group(function () {
         Route::get('/', [
             'as' => 'users.index',
@@ -303,8 +303,8 @@ Route::prefix('admin')->group(function () {
         ]);
 
     });
-//
-//    //Roles
+
+    //Roles
     Route::prefix('roles')->group(function () {
         Route::get('/', [
             'as' => 'roles.index',
@@ -334,14 +334,14 @@ Route::prefix('admin')->group(function () {
             'uses' => 'AdminRoleController@update'
         ]);
 
-        Route::get('/delete/{id}', [
-            'as' => 'roles.delete',
-            'uses' => 'AdminRoleController@delete'
-        ]);
+//        Route::get('/delete/{id}', [
+//            'as' => 'roles.delete',
+//            'uses' => 'AdminRoleController@delete'
+//        ]);
 
     });
 
-//    //Permission
+    //Permission
     Route::prefix('permissions')->group(function () {
         Route::get('/create', [
             'as' => 'permissions.create',
@@ -354,8 +354,8 @@ Route::prefix('admin')->group(function () {
             'uses' => 'AdminPermissionController@store'
         ]);
     });
-//
-//    //Order
+
+    //Order
     Route::prefix('order')->group(function () {
         Route::get('/', [
             'as' => 'order.index',

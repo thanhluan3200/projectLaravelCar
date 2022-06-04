@@ -9,7 +9,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable, SoftDeletes;
+    use SoftDeletes;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -40,18 +41,18 @@ class User extends Authenticatable
 
     public function roles()
     {
-        return $this->belongsToMany(Role::class, 'role_user', 'user_id', 'role_id');
+        return $this->belongsToMany(Role::class, 'role_user', 'user_id', 'role_id')->withTimestamps();
     }
 
-    public function checkPermissionAccess($pemissionCheck)
+    public function checkPermissionAccess($permissionCheck)
     {
-        // use login co quyen add, sua danh muc va xem menu
-       // B1 lay duoc tat ca cac quyen cua user dang login he thong
-        // B2 So sanh gia tri dua vao cua router hien tai xem co ton tai trong cac quyen ma minh lay dc hay khong
+
+        //Lay tat ca cac quyen cua user dang login vao he thong
+        //So sanh gia tri dua vao cua route hien tai xem co ton tao trong cac quyen hay khong
         $roles = auth()->user()->roles;
         foreach ($roles as $role) {
             $permissions = $role->permissions;
-            if ($permissions->contains('key_code', $pemissionCheck)) {
+            if ($permissions->contains('key_code', $permissionCheck)) {
                 return true;
             }
         }

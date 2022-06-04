@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Menu extends Model
 {
-    protected $guarded = [];
+    protected $fillable = ['name','parent_id','slug'];
     use SoftDeletes;
 }

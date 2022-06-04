@@ -15,7 +15,7 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <h1 style="text-transform: uppercase; color: #41b4b8;">Chào mừng bạn đến với website bán xe hơi</h1>
+                    <h1 style="text-transform: uppercase; color: #41b4b8;">QUẢN LÝ CỬA HÀNG XE HƠI</h1>
                 </div>
             </div>
             <!-- /.row -->

@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Slider extends Model
 {
     use SoftDeletes;
-   protected $guarded = [];
+    protected $guarded = [];
 }

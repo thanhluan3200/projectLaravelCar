@@ -44,12 +44,12 @@ class AdminProductController extends Controller
     public function index()
     {
         $product = $this->product->paginate(20);
+
         return view('admin.product.index', compact('product'));
     }
     public function create()
     {
         $htmlOption = $this->getcategory($parent_id = '');
-
         return view('admin.product.add', compact('htmlOption'));
     }
     public function getcategory($parent_id)

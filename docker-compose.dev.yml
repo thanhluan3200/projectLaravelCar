@@ -12,7 +12,7 @@ services:
     volumes: 
       - ./src/:/var/www/html
 #    entrypoint: ./.docker/script/appStart.sh
-    healthcheck:
+    healthcheck:  
       test: wget --quiet --tries=1 --spider http://localhost:8000 || exit 1z
       interval: 1m30s
       timeout: 30s

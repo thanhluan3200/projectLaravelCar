@@ -2,8 +2,6 @@ FROM php:7.4-fpm as base
 WORKDIR /var/www/html
 #Install extensions
 # Install dependencies
-FROM php:7.4-fpm as base
-WORKDIR /var/www/html
 
 FROM base as dev 
 # Install dependencies

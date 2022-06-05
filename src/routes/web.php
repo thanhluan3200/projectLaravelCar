@@ -1,69 +1,68 @@
 <?php
 //front-end
-//Route::get('/', 'HomeController@index')->name('home');
-//
-//Route::get('/category/{slug}/{id}', [
-//    'as' => 'category.product',
-//    'uses' => 'HomeController@selectcategory'
-//]);
-//
-//Route::get('/add-to-cart/{id}', [
-//    'as' => 'product.addToCart',
-//    'uses' => 'HomeController@addToCart',
-//]);
-//
-//Route::get('/show-cart', [
-//    'as' => 'product.showCart',
-//    'uses' => 'HomeController@showCart',
-//]);
-//
-//Route::get('/update-cart', [
-//    'as' => 'product.updateCart',
-//    'uses' => 'HomeController@updateCart',
-//]);
-//
-//Route::get('/delete-cart/{id}', [
-//    'as' => 'product.deleteCart',
-//    'uses' => 'HomeController@deleteCart',
-//]);
-//
-//Route::get('/details-product/{id}', [
-//    'as' => 'product.detailsProduct',
-//    'uses' => 'HomeController@detailsProduct',
-//]);
-//Route::get('/login-checkout', [
-//    'as' => 'product.loginCheckout',
-//    'uses' => 'HomeController@loginCheckout',
-//]);
-//Route::get('/logout-checkout', [
-//    'as' => 'product.logoutCheckout',
-//    'uses' => 'HomeController@logoutCheckout',
-//]);
-//Route::post('/add-customer', [
-//    'as' => 'product.addCustomer',
-//    'uses' => 'HomeController@addCustomer',
-//]);
-//Route::get('/checkout', [
-//    'as' => 'product.checkout',
-//    'uses' => 'HomeController@checkout',
-//]);
-//Route::post('/save-checkout-customer', [
-//    'as' => 'product.savecheckoutcustomer',
-//    'uses' => 'HomeController@savecheckoutcustomer',
-//]);
-//Route::get('/payment', [
-//    'as' => 'product.payment',
-//    'uses' => 'HomeController@payment',
-//]);
-//Route::post('/login-customer', [
-//    'as' => 'product.loginCustomer',
-//    'uses' => 'HomeController@loginCustomer',
-//]);
-//Route::post('/order-place', [
-//    'as' => 'product.orderPlace',
-//    'uses' => 'HomeController@orderPlace',
-//]);
-//
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/category/{slug}/{id}', [
+    'as' => 'category.product',
+    'uses' => 'HomeController@selectcategory'
+]);
+
+Route::get('/add-to-cart/{id}', [
+    'as' => 'product.addToCart',
+    'uses' => 'HomeController@addToCart',
+]);
+
+Route::get('/show-cart', [
+    'as' => 'product.showCart',
+    'uses' => 'HomeController@showCart',
+]);
+
+Route::get('/update-cart', [
+    'as' => 'product.updateCart',
+    'uses' => 'HomeController@updateCart',
+]);
+
+Route::get('/delete-cart/{id}', [
+    'as' => 'product.deleteCart',
+    'uses' => 'HomeController@deleteCart',
+]);
+
+Route::get('/details-product/{id}', [
+    'as' => 'product.detailsProduct',
+    'uses' => 'HomeController@detailsProduct',
+]);
+Route::get('/login-checkout', [
+    'as' => 'product.loginCheckout',
+    'uses' => 'HomeController@loginCheckout',
+]);
+Route::get('/logout-checkout', [
+    'as' => 'product.logoutCheckout',
+    'uses' => 'HomeController@logoutCheckout',
+]);
+Route::post('/add-customer', [
+    'as' => 'product.addCustomer',
+    'uses' => 'HomeController@addCustomer',
+]);
+Route::get('/checkout', [
+    'as' => 'product.checkout',
+    'uses' => 'HomeController@checkout',
+]);
+Route::post('/save-checkout-customer', [
+    'as' => 'product.savecheckoutcustomer',
+    'uses' => 'HomeController@savecheckoutcustomer',
+]);
+Route::get('/payment', [
+    'as' => 'product.payment',
+    'uses' => 'HomeController@payment',
+]);
+Route::post('/login-customer', [
+    'as' => 'product.loginCustomer',
+    'uses' => 'HomeController@loginCustomer',
+]);
+Route::post('/order-place', [
+    'as' => 'product.orderPlace',
+    'uses' => 'HomeController@orderPlace',
+]);
 
 //back-end
 Route::get('/admin', 'AdminController@loginAdmin');

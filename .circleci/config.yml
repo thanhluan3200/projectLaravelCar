@@ -8,6 +8,7 @@ jobs:
     steps:
       - checkout
       - run: echo "Start format code"
+      - run: chmod +x ./src/.docker/script/appStart.sh
       - run: 
           name: "Start services ..."
           command: docker-compose -f docker-compose.yml up -d

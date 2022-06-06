@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\Category;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
+use function foo\func;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +26,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('frontend.components.sidebar',function($view)
+        {
+           $view->with('categorys',Category::all());
+        });
     }
 }

@@ -46,17 +46,17 @@
 
                             <div class="input-group p-2 col-md-11">
                                 <div class="form-outline col-md-6 position-relative">
-                                                                        <input type="search" id="myInput" onkeyup="myFunction()" class="form-control"
-                                                                               placeholder="Tìm kiếm"/>
-{{--                                    <input data-url="{{route('product.searchbar')}}" type="search" id="myInputSearch" class="form-control"--}}
-{{--                                           placeholder="Tìm kiếm"/>--}}
-{{--                                    <div id="search-result" class="position-absolute list-group bg-white wrapper-full-page rounded-t-none shadow-lg"></div>--}}
+                                    <input type="search" id="myInput" onkeyup="myFunction()" class="form-control"
+                                           placeholder="Tìm kiếm"/>
+                                    {{--                                    <input data-url="{{route('product.searchbar')}}" type="search" id="myInputSearch" class="form-control"--}}
+                                    {{--                                           placeholder="Tìm kiếm"/>--}}
+                                    {{--                                    <div id="search-result" class="position-absolute list-group bg-white wrapper-full-page rounded-t-none shadow-lg"></div>--}}
                                 </div>
                             </div>
-{{--                            @can('product-add')--}}
-                                <a href="{{route('product.create')}}"
-                                   class="btn btn-success m-2 float-right">Add</a>
-{{--                            @endcan--}}
+                            {{--                            @can('product-add')--}}
+                            <a href="{{route('product.create')}}"
+                               class="btn btn-success m-2 float-right">Add</a>
+                            {{--                            @endcan--}}
                         </div>
                     </div>
                 </div>
@@ -79,18 +79,18 @@
                                 <th scope="row">{{$productItem->id}}</th>
                                 <th scope="row">{{$productItem->name}}</th>
                                 <th scope="row">{{number_format($productItem->price,0,',','.')}}</th>
-                                <th scope="row"><img style="height: 80px;width: 80px" src="{{$productItem->feature_image_path}}" alt="" ></th>
+                                <th scope="row"><img style="height: 80px;width: 80px" src="{{asset($productItem->feature_image_path)}}" alt="" ></th>
                                 <th scope="row">{{optional($productItem->category)->name}}</th>
                                 <td>
 
                                     <a href="{{route('product.edit',['id'=> $productItem->id])}}"
                                        class="btn btn-default">Edit</a>
 
-{{--                                    @can('product-delete')--}}
-                                        <a href=""
-                                           data-url="{{route('product.delete',['id'=>$productItem->id])}}"
-                                           class="btn btn-danger action_delete">Delete</a>
-{{--                                    @endcan--}}
+                                    {{--                                    @can('product-delete')--}}
+                                    <a href=""
+                                       data-url="{{route('product.delete',['id'=>$productItem->id])}}"
+                                       class="btn btn-danger action_delete">Delete</a>
+                                    {{--                                    @endcan--}}
                                 </td>
                             </tr>
                         @endforeach

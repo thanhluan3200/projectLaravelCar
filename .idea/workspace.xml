@@ -2,45 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a7aa335-35b9-4f65-a527-6dc0e3ef74d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Api/CategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Api/CustomerController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Api/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/MenuController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Search/AdminSettingController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Http/Controllers/Search/ProductSearchBar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Payment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.docker/db/aria_log.00000001" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/aria_log.00000001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.docker/db/aria_log_control" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/aria_log_control" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.docker/db/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/ib_buffer_pool" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.docker/db/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/ib_logfile0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.docker/db/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/categories.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/categories.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/categories.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/categories.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/customers.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/customers.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/customers.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/customers.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/menus.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/menus.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/menus.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/menus.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/migrations.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/migrations.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/migrations.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/migrations.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/order_details.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/order_details.frm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/order_details.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/order_details.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/orders.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/orders.frm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/orders.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/orders.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/password_resets.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/password_resets.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/password_resets.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/password_resets.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/payments.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/payments.frm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/payments.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/payments.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/permission_role.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/permission_role.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/permission_role.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/permission_role.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/permissions.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/permissions.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/permissions.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/permissions.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/product_images.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/product_images.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/product_images.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/product_images.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/product_tags.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/product_tags.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/product_tags.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/product_tags.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/products.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/products.frm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/products.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/products.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/role_user.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/role_user.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/role_user.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/role_user.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/roles.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/roles.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/roles.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/roles.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/settings.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/settings.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/settings.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/settings.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/shippings.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/shippings.frm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/shippings.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/shippings.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.docker/db/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/mysql/innodb_index_stats.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.docker/db/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/mysql/innodb_table_stats.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/components/main_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/components/main_menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/components/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/frontend/product/cart/component/cart_component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/frontend/product/cart/component/cart_component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/partial/content-header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/partial/content-header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/sliders.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/sliders.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/sliders.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/sliders.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/tags.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/tags.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/tags.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/tags.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/users.frm" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/users.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.docker/db/laravel/users.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/src/.docker/db/laravel/users.ibd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/src/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -145,7 +168,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -153,18 +176,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\DACN\New folder\projectLaravelCar\src\public" />
+      <recent name="E:\DACN\New folder\projectLaravelCar\src\storage\app\public" />
+      <recent name="E:\DACN\New folder\projectLaravelCar\src\storage\app\public\product\1" />
       <recent name="E:\DACN\New folder\projectLaravelCar\src" />
       <recent name="E:\DACN\New folder\projectLaravelCar\src\app" />
-      <recent name="E:\DACN\New folder\projectLaravelCar\src\app\Http\Controllers\Search" />
-      <recent name="E:\DACN\New folder\projectLaravelCar\src\app\Http\Controllers" />
-      <recent name="E:\DACN\New folder\projectLaravelCar\src\storage\app\public" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
-      <option name="pathToComposerJson" value="$PROJECT_DIR$/src/composer.json" />
-      <method v="2" />
-    </configuration>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\DACN\New folder\projectLaravelCar\src\storage\app\public" />
+      <recent name="E:\DACN\New folder\projectLaravelCar\src\public\storage" />
+      <recent name="E:\DACN\New folder\projectLaravelCar\src\public" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -174,7 +196,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654399240971</updated>
-      <workItem from="1654399242679" duration="6165000" />
+      <workItem from="1654399242679" duration="6912000" />
+      <workItem from="1654410451607" duration="5629000" />
+      <workItem from="1654479615852" duration="2172000" />
+      <workItem from="1654482599757" duration="7956000" />
     </task>
     <servers />
   </component>
